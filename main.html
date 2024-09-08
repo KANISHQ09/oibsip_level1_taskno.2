@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanishq - Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #header {}
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgb(44, 40, 40);
+      height: 80px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    nav ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 10px 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover {
+      color: rgb(88, 88, 88);
+      font-size: 1rem;
+    }
+
+    .left {
+      font-size: 1.5rem;
+    }
+
+    .first {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-image: url("1.avif"); 
+      background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat;
+      height: 90vh; 
+      margin: 0; 
+    }
+
+    .first>div {
+      width: 30%;
+
+    }
+
+    .lf {
+      font-size: 3rem;
+      width: 50%;
+      margin: 30px 0;
+      flex-basis: 30%;
+    }
+
+    .rf{
+      flex-basis: 50%;
+      
+    }
+    .rf img{
+      width: 100%;
+      height: 100%;
+      padding-top: 20%;
+      padding-left: 11%;
+      padding-right: 10%;
+      padding-bottom: 20%;
+    }
+
+    .s1 {
+      transform: translate();
+      color: transparent;
+      background-image: linear-gradient(rgb(88, 88, 88), rgb(88, 88, 88));
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      background-position: -215px 0;
+      animation: backcolor 5s linear infinite alternate;
+
+    }
+
+    @keyframes backcolor {
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+
+    #element {
+      color: rgb(88, 88, 88);
+    }
+
+    #about {
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 6%;
+      padding-bottom: 10%;
+      color: white;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .aboutc1 {
+      flex-basis: 35%;
+
+    }
+
+    .aboutc1 img {
+      width: 100%;
+      border-radius: 15px;
+      display: top;
+
+    }
+
+    .aboutc2 {
+      flex-basis: 60%;
+    }
+
+    .subt {
+      font-size: 50px;
+      font-weight: 400;
+    }
+
+    .subtxt {
+      color: rgb(88, 88, 88);
+      font-size: 30px;
+    }
+
+    .txt {
+      font-size: 26px;
+      padding-top: 1%;
+      padding-bottom: 0.8%;
+    }
+
+    .tab {
+      display: flex;
+      margin: 20px 0 40px;
+    }
+
+    .tab-links {
+      margin-right: 50px;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .tab-links.active-link:not(:target) {
+      color: rgb(88, 88, 88);
+    }
+
+    .tab-content ul li {
+      list-style: none;
+      margin: 10px 0;
+    }
+
+    .tab-content ul li span {
+      color: rgb(137, 134, 134);
+      font-size: 15px;
+    }
+
+    .tab-content {
+      display: none;
+
+    }
+
+    .tab-content.active-tab {
+      display: block;
+    }
+
+    #services {
+      padding: 30px 0;
+      margin-bottom: 20%;
+
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 40px;
+      margin-top: 50px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .subt2 {
+      padding-left: 10%;
+    }
+
+    .services-list div {
+      background-color: #262626;
+      padding: 40px;
+      font-size: 13px;
+      font-weight: 300;
+      border-radius: 10px;
+      transition: background 0.5s, transform 0.5s;
+    }
+
+    .services-list div i {
+      font-size: 50px;
+      margin-left: 8px;
+      margin-bottom: 30px;
+    }
+
+    .services-list div h2 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .services-list div a {
+      text-decoration: none;
+      color: rgb(45, 161, 43);
+      font-size: 13px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .services-list div:hover {
+      background: rgb(215, 34, 34);
+      transform: translateY(-10px);
+    }
+
+    .pep {
+      font-size: 15.5px;
+    }
+
+    #projects {
+      padding: 50px 0;
+    }
+
+    .subt3 {
+      padding-left: 10%;
+    }
+
+    .work-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 40px;
+      margin-top: 50px;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .work {
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 20%;
+    }
+
+    .work img {
+      width: 95%;
+      height: 70%;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .layer {
+      width: 100%;
+      height: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), #ba2453);
+      border-radius: 10px;
+      position: absolute;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      left: 0;
+      bottom: 0;
+      transition: height 0.5s;
+
+    }
+
+    .layer h3 {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .layer a {
+      margin-top: 20px;
+      color: #ba2453;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 60px;
+      background: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      text-align: center;
+
+    }
+
+    .work:hover img {
+      transform: scale(1.1);
+    }
+
+    .work:hover .layer {
+      height: 100%;
+    }
+
+    .btn {
+      display: block;
+      margin: 50px auto;
+      width: fit-content;
+      border: 1px solid red;
+      padding: 14px 50px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: red;
+      transition: background 0.5s;
+    }
+
+    .btn:hover {
+      background: rgba(224, 216, 216, 0.842);
+    }
+
+    .row {
+
+      padding-bottom: 12%;
+    }
+
+    .subt4 {
+      padding-top: 10%;
+      padding-left: 2.5%;
+    }
+
+    .contact-left {
+      padding-left: 10%;
+      flex-basis: 30%;
+      font-size: 14px;
+    }
+
+    .contact-left p {
+      margin-top: 30px;
+    }
+
+    .contact-left p i {
+      color: white;
+      margin: 15px;
+      font-size: 25px;
+    }
+
+    .ic {
+      padding-left: 10%;
+    }
+
+    .icons {
+      margin-top: 30px;
+    }
+
+    .icons a {
+      text-decoration: none;
+      font-size: 30px;
+      margin-right: 15px;
+      color: #ababab;
+      display: inline-block;
+      transition: transform 0.5s;
+    }
+
+    .icons a:hover {
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .contact-right {
+      flex-basis: 50%;
+      padding-right: 10%;
+    }
+
+    .contact-right form {
+      width: 100%;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: #262626;
+      padding: 15px;
+      margin: 15px 0;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 6px;
+    }
+
+    .btn2 {
+      display: block;
+      margin: 50px auto;
+      width: fit-content;
+      border: 1px solid;
+      padding: 14px 50px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #766f6f;
+      transition: background 0.5s;
+      cursor: pointer;
+    }
+
+    .btn2:hover {
+      background: transparent;
+    }
+
+    form .btn2 {
+      padding: 14px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      display: inline-block;
+
+    }
+
+    .copyright {
+      width: 100%;
+      text-align: center;
+      padding: 25px;
+      background: rgb(44, 40, 40);
+      font-weight: 300;
+      margin-top: 20px;
+    }
+
+    nav .fa-solid {
+      display: none;
+    }
+
+    .nav-image {
+      display: none;
+    }
+
+    #msg {
+      color: #766f6f;
+      margin-top: -40px;
+      display: block;
+    }
+
+    @media only screen and (max-width:600px) {
+      .s1 {
+        transform: translate();
+        color: transparent;
+        background-image: linear-gradient(rgb(88, 88, 88), rgb(88, 88, 88));
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        background-position: -145px 0;
+        animation: backcolor 5s linear infinite alternate;
+
+      }
+
+      @keyframes backcolor {
+        100% {
+          background-position: 0 0;
+        }
+      }
+
+      .rf img {
+        display: none;
+      }
+
+      .lf {
+        display: block;
+        font-size: 2rem;
+      }
+
+      .nav-image {
+        display: block;
+        width: 315px;
+        margin: 0;
+      }
+
+      nav .fa-solid {
+        display: block;
+        font-size: 25px;
+      }
+
+      nav ul {
+        display: inline;
+        background: grey;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+
+      }
+
+      nav ul li {
+        display: block;
+        margin: 25px;
+      }
+
+      nav ul .fa-solid {
+        position: absolute;
+        top: 20px;
+        left: 25px;
+        cursor: pointer;
+      }
+
+      .subt {
+        font-size: 40px;
+      }
+
+      .aboutc1,
+      .aboutc2 {
+        flex-basis: 100%;
+      }
+
+      .aboutc1 {
+        margin-bottom: 30px;
+
+      }
+
+      .aboutc2 {
+        font-size: 14px;
+      }
+
+      .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+      }
+
+      .contact-left,
+      .contact-right {
+        flex-basis: 100%;
+      }
+
+      .ic {
+        margin-left: 5%;
+      }
+
+      .btn2 {
+        margin-left: 20%;
+      }
+
+      .copyright {
+        font-size: 14px;
+      }
+
+      form {
+        padding-left: 10%;
+      }
+
+      form .btn2 {
+        margin-left: 0;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/55472d616e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header">
+    <nav>
+
+      <div class="left">ᴋᴀɴɪꜱʜQ</div>
+      <div class="left"></div>
+      <ul id="sidemenu">
+        <li><a href="#header">ᕼOᗰE</a></li>
+        <li><a href="#about">ᗩᗷOᑌT</a></li>
+        <li><a href="#services">SEᖇᐯIᑕES</a></li>
+        <li><a href="#projects">PᖇOᒍEᑕTS</a></li>
+        <li><a href="#contact">ᑕOᑎTᗩᑕT</a></li>
+        <i class="fa-solid fa-x" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+
+  </div>
+
+  <main>
+    <section class="first">
+      <div class="lf">
+        <img src="newai.jpg" class="nav-image"><br>
+        𝖧𝗂, 𝖨'𝗆 <span class="s1">KᗩᑎISᕼQ</span>
+
+        <div>𝖺𝗇𝖽 𝖨'𝗆 𝖺</div>
+        <span id="element"></span>
+
+      </div>
+      <div class="rf">
+        <img src="newai.jpg">
+      </div>
+    </section>
+
+  </main>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['ᗯEᗷ ᗪESIGᑎEᖇ', 'ᗯEᗷ ᗪEᐯEᒪOᑭEᖇ', 'ᐯIᗪEO EᗪITOᖇ'],
+      typeSpeed: 60,
+    });
+  </script>
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="aboutc1">
+          <img src="WhatsApp Image 2024-07-21 at 8.17.05 PM (1).jpeg">
+        </div>
+        <div class="aboutc2">
+          <h1 class="subt">ᗩᗷOᑌT ᗰE</h1><br>
+          <h1 class="subtxt">Helping brands thrive in the digital world...</h1>
+
+          <div class="txt">
+            <p>𝖨 𝗁𝖾𝗅𝗉 𝗉𝖾𝗈𝗉𝗅𝖾 𝖿𝗋𝗈𝗆 𝖺𝗅𝗅 𝗈𝗏𝖾𝗋 𝗍𝗁𝖾 𝗐𝗈𝗋𝗅𝖽 𝗐𝗂𝗍𝗁 𝗍𝖺𝗂𝗅𝗈𝗋-𝗆𝖺𝖽𝖾
+              𝗌𝗈𝗅𝗎𝗍𝗂𝗈𝗇𝗌.<br>
+              𝖶𝗂𝗍𝗁 𝖾𝖺𝖼𝗁 𝗉𝗋𝗈𝗃𝖾𝖼𝗍, 𝖨 𝗉𝗎𝗌𝗁 𝗆𝗒 𝗐𝗈𝗋𝗄 𝗍𝗈 𝗇𝖾𝗐 𝗁𝗈𝗋𝗂𝗓𝗈𝗇𝗌, 𝖺𝗅𝗐𝖺𝗒𝗌
+              𝗉𝗎𝗍𝗍𝗂𝗇𝗀 𝗊𝗎𝖺𝗅𝗂𝗍𝗒 𝖿𝗂𝗋𝗌𝗍.</p>
+          </div>
+
+          <div class="tab">
+            <p class="tab-links active-link" onclick="opentab('skills')">𝖲𝗄𝗂𝗅𝗅𝗌</p>
+            <p class="tab-links" onclick="opentab('exp')">𝖤𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾</p>
+            <p class="tab-links" onclick="opentab('edu')">𝖤𝖽𝗎𝖼𝖺𝗍𝗂𝗈𝗇</p>
+          </div>
+          <div class="tab-content active-tab" id="skills">
+            <ul>
+              <li><span>UI/Ux</span><br>Designing Web/App Interfaces</li>
+              <li><span>Web Development</span><br>Website Development</li>
+              <li><span>App Development</span><br>Building Android/iOS Apps</li>
+            </ul>
+          </div>
+
+          <div class="tab-content" id="exp">
+            <ul>
+              <li><span>June'24 - August'24</span><br>Scaler</li>
+              <li><span>August'24 - September'24</span><br>Oasis Infobyte</li>
+              <li><span></span><br></li>
+            </ul>
+          </div>
+
+          <div class="tab-content" id="edu">
+            <ul>
+              <li><span>Present</span><br>B.tech in Cse</li>
+              <li><span>2023 - 2024</span><br>Higher Studies</li>
+              <li><span></span><br></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services">
+    <div class="container">
+      <h1 class="subt2">ᗰY SEᖇᐯIᑕES</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>ᗯEᗷ ᗪESIGᑎ</h2>
+          <p class="pep">Hands-on with designing websites, I design user-friendly digital designs.</p>
+          <a href="#">Learn more...</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop"></i>
+          <h2>ᑌI/ᑌ᙭</h2>
+          <p class="pep">My main focus is on No-code websites to make work more efficient.(Webflow,Figma & Google sites)
+          </p>
+          <a href="#">Learn more...</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-app-store"></i>
+          <h2>ᗩᑭᑭ ᗪESIGᑎ</h2>
+          <p class="pep">Strong focus on clean, intuitive design, ensuring every app I develop is both visually
+            appealing and user-friendly.</p>
+          <a href="#">Learn more...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="projects">
+    <div class="container">
+      <h1 class="subt3">My Work</h1>
+      <div class="work-list">
+
+        <div class="work">
+          <img src="nocode.png">
+          <div class="layer">
+            <br>
+            <h3>No-Code Website</h3><br>
+            <p>Built using Webflow, the website leverages the platform's powerful CMS and design capabilities to create
+              a fully responsive and user-friendly interface.</p><br>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="AI.webp">
+          <div class="layer">
+            <br>
+            <h3>AI Assistant</h3><br>
+            <p>A virtual assistant that helps with daily tasks like scheduling, reminders, and enhance productivity with
+              user-friendly features and intuitive functionality.</p><br>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="design.webp">
+          <div class="layer">
+            <br>
+            <h3>Designing</h3><br>
+            <p>I used my UI/UX design skills for creating effective ad copy and visual designs, enhancing the user
+              experience and streamlining the ad creation process.</p><br>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <a href="#" class="btn">See more...</a>
+    </div>
+  </div>
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+
+        <div class="contact-left">
+          <h1 class="subt4">Contact Me</h1>
+          <p><i class="fa-solid fa-square-arrow-up-right"></i>kanishq0309@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i>+91 7987453645</p>
+          <div class="icons">
+            <a class="ic" href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a class="ic" href=""><i class="fa-brands fa-square-instagram"></i></a>
+            <a class="ic" href=""><i class="fa-brands fa-github"></i></a>
+          </div>
+          <a href="CV.pdf" download class="btn2">Download CV</a>
+        </div>
+
+
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright © Kanishq <span><i class="fa-solid fa-robot"></i></span>
+        <span><i class="fa-solid fa-heart-pulse"></i></span>
+      </p>
+    </div>
+  </div>
+
+
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-content");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove('active-link');
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove('active-tab');
+      }
+      event.currentTarget.classList.add('active-link');
+      document.getElementById(tabname).classList.add('active-tab')
+    }
+  </script>
+
+  <script>
+    var sidemeu = document.getElementById("sidemenu");
+    function openmenu() {
+      sidemeu.style.right = "0";
+    }
+    function closemenu() {
+      sidemeu.style.right = "-200px";
+    }
+  </script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzPQ9Eim9kXAkDkZcER1D2uQTSBnde8Mry6ED06XzEhD9kJgQjIm2PO9Cg83szIPomH/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Message sent successfully"
+          setTimeout(function () {
+            msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+
+</html>
